@@ -11,6 +11,9 @@
                 if ($letter == "s" && $i != 0 ) {
                     array_push($output_letters, "z");
                 }
+                elseif($letter == "S") {
+                    array_push($output_letters, $letter);
+                }    
                 else {
                     array_push($output_letters, $letter);
                 }
