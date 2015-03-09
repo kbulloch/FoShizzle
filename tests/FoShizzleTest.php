@@ -43,5 +43,18 @@
             $this->assertEquals("bazz", $result);
 
         }
+
+        function testFoShizzleStartS()
+        {
+            //Arrange
+            $test_fo_shizzle_start_s = new FoShizzle;
+            $input = "start";
+
+            //Act
+            $result = $test_fo_shizzle_start_s->changeLetters($input);
+
+            //Assert
+            $this->assertEquals("start", $result);
+        }
     }
 ?>
