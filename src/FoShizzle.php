@@ -5,16 +5,16 @@
         {
             $input_words = explode(" ", $input);
 
-            $output_letters = array();
             $output_words = array();
 
-            $i=0;
-
             foreach ($input_words as $word) {
-                $input_letters = str_split($word);
 
-                foreach ($input_letters as $letter) {
-                    if ($letter == "s" && $i != 0 ) {
+                $output_letters = array();
+                $letters_in_current_word = str_split($word);
+                $letter_counter=0;
+
+                foreach ($letters_in_current_word as $letter) {
+                    if ($letter == "s" && $letter_counter != 0 ) {
                         array_push($output_letters, "z");
                     }
                     elseif($letter == "S") {
@@ -23,17 +23,14 @@
                     else {
                         array_push($output_letters, $letter);
                     }
-                    ++$i;
-
+                    ++$letter_counter;
                 }
 
-                $one_word = implode($output_letters);
-
-
+                $current_word = implode($output_letters);
+                array_push($output_words, $current_word);
             }
 
-            array_push($output_words, $one_word);
-            return implode($output_words);
+            return implode($output_words, " ");
         }
     }
 ?>
