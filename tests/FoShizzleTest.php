@@ -48,13 +48,13 @@
         {
             //Arrange
             $test_fo_shizzle_multi_words = new FoShizzle;
-            $input = "Here are some words";
+            $input = "The skills Susan has are serious";
 
             //Act
             $result = $test_fo_shizzle_multi_words->changeLetters($input);
 
             //Assert
-            $this->assertEquals("Here are some wordz", $result);
+            $this->assertEquals("The skillz Suzan haz are seriouz", $result);
         }
     }
 ?>
