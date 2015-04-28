@@ -12,7 +12,7 @@ This app takes a phrase and adds a fo' shizzle stylization by replacing certain 
 
 Clone this repo.
 
-Then in the project working directory
+Then in the web folder
 ```
 php -S localhost:8000
 ```
